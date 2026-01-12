@@ -1,0 +1,45 @@
+run:
+  output_dir: /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/runs
+  run_name: benchmark_cdtravail
+logging:
+  level: INFO
+data:
+  corpus_jsonl: /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/data/corpus_chunks.jsonl
+  dictionary_yml: data/juridical_dictionary.yml
+  limit: null
+filters:
+  doc_types:
+  - article
+  code_title_contains: travail
+  as_of: None
+  strict_temporal: false
+  doc_id_contains: null
+bm25_benchmark:
+  queries_file: /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/configs/queries_cdtravail.yaml
+  k: 10
+  text_field: text
+evaluation:
+  qrels_file: /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/configs/qrels_cdtravail.yaml
+  k: 10
+retrieval:
+  retriever: elasticsearch
+  mode: hybrid
+  k: 10
+  bm25_shortlist: 200
+  rrf_k: 60
+  elasticsearch:
+    host: http://localhost:9200
+    index: rag_bench_cdtravail
+    recreate_index: false
+dense:
+  embedding_model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+  cache_dir: /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/result_tests/cache_dense
+  device: cpu
+  cache_tag: dd4c5fcc239d1c34
+  resolved_cache_dir: /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/result_tests/cache_dense
+query:
+  use_query_understanding: true
+  use_min_expansion: false
+output:
+  show_verbatim: true
+  preview_chars: 450

@@ -1,0 +1,43 @@
+run:
+  output_dir: runs
+  run_name: benchmark_cdtravail
+logging:
+  level: INFO
+data:
+  corpus_jsonl: data/corpus_chunks.jsonl
+  dictionary_yml: data/juridical_dictionary.yml
+  limit: null
+filters:
+  doc_types:
+  - article
+  code_title_contains: travail
+  as_of: None
+  strict_temporal: false
+  doc_id_contains: null
+bm25_benchmark:
+  queries_file: configs/queries_cdtravail.yaml
+  k: 10
+  text_field: text
+evaluation:
+  qrels_file: configs/qrels_cdtravail.yaml
+  k: 10
+retrieval:
+  retriever: elasticsearch
+  mode: hybrid
+  k: 10
+  bm25_shortlist: 200
+  rrf_k: 60
+  elasticsearch:
+    host: http://localhost:9200
+    index: rag_bench_cdtravail
+    recreate_index: false
+dense:
+  embedding_model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+  cache_dir: result_tests/cache_dense
+  device: cpu
+query:
+  use_query_understanding: true
+  use_min_expansion: false
+output:
+  show_verbatim: true
+  preview_chars: 450

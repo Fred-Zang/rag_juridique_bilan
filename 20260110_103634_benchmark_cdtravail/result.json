@@ -1,0 +1,15 @@
+{
+  "status": "OK",
+  "run_dir": "/home/fred/montage1/-- Projet RAG Avocats --/rag_bench/runs/20260110_103634_benchmark_cdtravail",
+  "retriever": "elasticsearch",
+  "mode": "hybrid",
+  "elasticsearch": {
+    "host": "http://localhost:9200",
+    "index": "rag_bench_cdtravail",
+    "recreate_index": false
+  },
+  "outputs": {
+    "results": "hybrid_results.jsonl",
+    "metrics": "metrics_hybrid.json"
+  }
+}

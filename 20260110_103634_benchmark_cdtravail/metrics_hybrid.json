@@ -1,0 +1,45 @@
+{
+  "average": {
+    "Recall@10": 0.9666666666666666,
+    "MRR": 1.0,
+    "nDCG@10": 0.9322315081080561,
+    "num_queries": 5
+  },
+  "per_query": {
+    "q1": {
+      "Recall@10": 1.0,
+      "MRR": 1.0,
+      "nDCG@10": 1.0,
+      "num_relevant": 3,
+      "num_retrieved": 10
+    },
+    "q2": {
+      "Recall@10": 1.0,
+      "MRR": 1.0,
+      "nDCG@10": 1.0,
+      "num_relevant": 1,
+      "num_retrieved": 10
+    },
+    "q3": {
+      "Recall@10": 1.0,
+      "MRR": 1.0,
+      "nDCG@10": 1.0,
+      "num_relevant": 7,
+      "num_retrieved": 10
+    },
+    "q4": {
+      "Recall@10": 1.0,
+      "MRR": 1.0,
+      "nDCG@10": 0.9674679834891693,
+      "num_relevant": 3,
+      "num_retrieved": 10
+    },
+    "q5": {
+      "Recall@10": 0.8333333333333334,
+      "MRR": 1.0,
+      "nDCG@10": 0.6936895570511106,
+      "num_relevant": 6,
+      "num_retrieved": 10
+    }
+  }
+}

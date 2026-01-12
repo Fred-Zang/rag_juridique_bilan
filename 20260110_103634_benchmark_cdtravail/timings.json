@@ -1,0 +1,10 @@
+{
+  "timings_seconds": {
+    "1) config_used.yaml": 0.003009805999681703,
+    "2) chargement + filtrage": 0.5005883260000701,
+    "3) chargement requêtes": 0.0024399220001214417,
+    "4) Elasticsearch benchmark": 13.737304674999905,
+    "5) évaluation qrels": 0.006941804000234697
+  },
+  "total_seconds": 14.250284533000013
+}

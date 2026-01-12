@@ -1,0 +1,44 @@
+2026-01-10 10:36:34 | INFO | Run démarré | run_dir=/home/fred/montage1/-- Projet RAG Avocats --/rag_bench/runs/20260110_103634_benchmark_cdtravail
+2026-01-10 10:36:34 | INFO | Timing | 0) setup avant logger | 0.007s
+2026-01-10 10:36:34 | INFO | Config chargée depuis : /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/configs/benchmark_cdtravail.yaml
+2026-01-10 10:36:34 | INFO | Config sauvegardée : /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/runs/20260110_103634_benchmark_cdtravail/config_used.yaml
+2026-01-10 10:36:34 | INFO | Timing | 1) config_used.yaml | 0.003s
+2026-01-10 10:36:34 | INFO | Nombre total de chunks chargés : 13180
+2026-01-10 10:36:34 | INFO | Stats filtrage : {'seen': 13180, 'drop_title': 10888, 'drop_doc_type': 1857, 'kept': 435}
+2026-01-10 10:36:34 | INFO | Nombre de chunks après filtrage : 435
+2026-01-10 10:36:34 | INFO | Exemple 1 | doc_type=article | titre=Code du travail | doc_id=D:\-- Projet RAG Avocats --\data_main\data\20250731-220719\legi\global\code_et_TNC_en_vigueur\code_en_vigueur\LEGI\TEXT\00\00\06\07\20\LEGITEXT000006072050\article\LEGI\ARTI\00\00\06\64\64\LEGIARTI000006646450.xml
+2026-01-10 10:36:34 | INFO | Exemple 2 | doc_type=article | titre=Code du travail | doc_id=D:\-- Projet RAG Avocats --\data_main\data\20250731-220719\legi\global\code_et_TNC_en_vigueur\code_en_vigueur\LEGI\TEXT\00\00\06\07\20\LEGITEXT000006072050\article\LEGI\ARTI\00\00\06\64\70\LEGIARTI000006647015.xml
+2026-01-10 10:36:34 | INFO | Exemple 3 | doc_type=article | titre=Code du travail | doc_id=D:\-- Projet RAG Avocats --\data_main\data\20250731-220719\legi\global\code_et_TNC_en_vigueur\code_en_vigueur\LEGI\TEXT\00\00\06\07\20\LEGITEXT000006072050\article\LEGI\ARTI\00\00\06\64\70\LEGIARTI000006647016.xml
+2026-01-10 10:36:34 | INFO | Timing | 2) chargement + filtrage | 0.501s
+2026-01-10 10:36:34 | INFO | Timing | 3) chargement requêtes | 0.002s
+2026-01-10 10:36:34 | INFO | Config résolue sauvegardée : /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/runs/20260110_103634_benchmark_cdtravail/config_resolved.yaml
+2026-01-10 10:36:34 | INFO | Backend Elasticsearch | host=http://localhost:9200 | index=rag_bench_cdtravail | mode=hybrid | recreate=False
+2026-01-10 10:36:34 | INFO | Pré-requis : le conteneur Elasticsearch doit être démarré avant ce run.
+2026-01-10 10:36:34 | INFO | Exec: /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/.venv_linux/bin/python -m rag_bench.benchmark_elasticsearch --config /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/configs/benchmark_cdtravail.yaml --es-host http://localhost:9200 --es-index rag_bench_cdtravail --run-dir /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/runs/20260110_103634_benchmark_cdtravail --mode hybrid --skip-metrics
+2026-01-10 10:36:40 | INFO | Paths resolved | corpus=/home/fred/montage1/-- Projet RAG Avocats --/rag_bench/data/corpus_chunks.jsonl | queries=/home/fred/montage1/-- Projet RAG Avocats --/rag_bench/configs/queries_cdtravail.yaml | qrels=/home/fred/montage1/-- Projet RAG Avocats --/rag_bench/configs/qrels_cdtravail.yaml
+2026-01-10 10:36:40 | INFO | Run dir: /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/runs/20260110_103634_benchmark_cdtravail
+2026-01-10 10:36:40 | INFO | Mode=hybrid | k=10 | index=rag_bench_cdtravail | es=http://localhost:9200
+2026-01-10 10:36:41 | INFO | Corpus chargé: 13180 chunks | 0.477s
+2026-01-10 10:36:41 | INFO | Stats filtrage : {'seen': 13180, 'drop_title': 10888, 'drop_doc_type': 1857, 'kept': 435}
+2026-01-10 10:36:41 | INFO | Corpus filtré: 435 chunks | 0.025s
+2026-01-10 10:36:41 | INFO | Timing | dense:load_cache | 0.001s
+2026-01-10 10:36:41 | INFO | Embeddings chargés depuis le cache : /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/result_tests/cache_dense/emb_6a584aa9a3cf053d.npy
+2026-01-10 10:36:45 | INFO | Timing | dense:load_model | 3.674s
+2026-01-10 10:36:45 | INFO | Embeddings prêts: shape=(435, 384) | 3.676s
+2026-01-10 10:36:45 | INFO | Création index ES : rag_bench_cdtravail (dims=384)
+2026-01-10 10:36:45 | INFO | Index ES créé : rag_bench_cdtravail
+2026-01-10 10:36:45 | INFO | Index ES vide -> bulk indexation (N=435 chunks)
+2026-01-10 10:36:46 | INFO | Bulk OK=435 | 0.892s
+2026-01-10 10:36:46 | INFO | Queries chargées: 5 | /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/configs/queries_cdtravail.yaml
+2026-01-10 10:36:46 | INFO | HybridES | query_id=q1 | fused=10
+2026-01-10 10:36:46 | INFO | HybridES | query_id=q2 | fused=10
+2026-01-10 10:36:47 | INFO | HybridES | query_id=q3 | fused=10
+2026-01-10 10:36:47 | INFO | HybridES | query_id=q4 | fused=10
+2026-01-10 10:36:47 | INFO | HybridES | query_id=q5 | fused=10
+2026-01-10 10:36:47 | INFO | Résultats écrits: /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/runs/20260110_103634_benchmark_cdtravail/hybrid_results.jsonl
+2026-01-10 10:36:47 | INFO | skip-metrics=1 -> metrics.json non écrit (orchestration run.py).
+2026-01-10 10:36:48 | INFO | Timing | 4) Elasticsearch benchmark | 13.737s
+2026-01-10 10:36:48 | INFO | Évaluation hybrid: qrels=/home/fred/montage1/-- Projet RAG Avocats --/rag_bench/configs/qrels_cdtravail.yaml, k=10
+2026-01-10 10:36:48 | INFO | Métriques hybrid écrites dans : /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/runs/20260110_103634_benchmark_cdtravail/metrics_hybrid.json
+2026-01-10 10:36:48 | INFO | Timing | 5) évaluation qrels | 0.007s
+2026-01-10 10:36:48 | INFO | Timings sauvegardés : /home/fred/montage1/-- Projet RAG Avocats --/rag_bench/runs/20260110_103634_benchmark_cdtravail/timings.json
