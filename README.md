@@ -39,7 +39,18 @@ Ces schémas mettent en évidence :
 
 ---
 
-### 2️⃣ `20260110_103634_benchmark_cdtravail/`
+### 2️⃣ `Z-resume_benchmark_actuel.ipynb`
+Notebook de **résumé pédagogique**, sans code complexe, présentant :
+- la démarche suivie,
+- les hypothèses posées,
+- les résultats observés,
+- et les limites identifiées.
+
+Il sert de **support de lecture rapide** pour comprendre le benchmark sans entrer dans les détails d’implémentation.
+
+---
+
+### 3️⃣ `20260110_103634_benchmark_cdtravail/`
 Exemple concret d’un **run de benchmark hybride (BM25 + dense)** exécuté via Elasticsearch.
 
 Ce dossier contient :
@@ -52,7 +63,7 @@ Ce dossier contient :
 
 ---
 
-### 3️⃣ `Z-positifs_metrics.ipynb`
+### 4️⃣ `Z-positifs_metrics.ipynb`
 Notebook de réflexion (principalement conceptuel) sur les **différentes définitions possibles du “positif”** dans un système RAG :
 
 - passage / chunk-level,
@@ -63,17 +74,6 @@ Notebook de réflexion (principalement conceptuel) sur les **différentes défin
 Chaque définition est reliée aux **métriques adaptées** et à leur **interprétation** (FP, FN, risques associés, notamment en contexte juridique).
 
 👉 Ce notebook fait directement écho aux échanges tenus en entretien.
-
----
-
-### 4️⃣ `Z-resume_benchmark_actuel.ipynb`
-Notebook de **résumé pédagogique**, sans code complexe, présentant :
-- la démarche suivie,
-- les hypothèses posées,
-- les résultats observés,
-- et les limites identifiées.
-
-Il sert de **support de lecture rapide** pour comprendre le benchmark sans entrer dans les détails d’implémentation.
 
 ---
 
