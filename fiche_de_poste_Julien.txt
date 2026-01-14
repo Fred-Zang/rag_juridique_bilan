@@ -1,0 +1,49 @@
+Voici le descriptif de la mission :
+
+je recherche un profil RAG Engineer senior pour une mission de 6 mois minimum. (full remote possible si top profil dans la cible ou hybrid site client à Casablanca - Maroc).
+
+Le projet :
+
+Construction d'une plateforme capable de répondre à des questions juridiques de façon fiable, sourcée et traçable, en s’appuyant sur un corpus massif de documents juridiques hétérogènes.
+
+Votre mission :
+
+Vous serez responsable de la chaîne “question utilisateur → bons extraits → réponse fiable et sourcée”.
+Votre rôle est de faire du moteur RAG un système mesurable, stable, améliorable.
+
+Au cœur du poste (intérêt technique)
+
+Concevoir et implémenter un retrieval robuste sur corpus juridique :
+- recherche dense (embeddings) et hybride (BM25 + embeddings)
+- filtres metadata (type de texte, date, juridiction, version, etc.)
+
+Mettre en place du reranking (cross-encoder / reranker) pour améliorer la précision des résultats.
+
+Définir une stratégie de query understanding :
+- query rewriting, multi-query, expansion (synonymes juridiques), gestion des requêtes longues
+
+Construire l’évaluation de bout en bout :
+- dataset de questions/réponses + guidelines d’annotation
+- métriques (Recall@k, MRR, nDCG), tests de régression, analyse d’erreurs
+
+Implémenter des mécanismes de grounding / citations :
+- réponses basées sur les sources
+- citations précises (document/page/section)
+- gestion “no-answer” / refus contrôlé quand la source manque
+
+Profil recherché
+
+4+ ans d’expérience en Search / Information Retrieval / Ranking ou en ML appliqué à la pertinence
+
+Très bonne maîtrise de Python
+
+Forte culture métriques & expérimentation : amélioration prouvée par des mesures, pas au “feeling”
+
+Capacité à construire des systèmes robustes en production (qualité, performance, instrumentation)
+
+Maîtrise professionnelle du français (lecture fine et jugement de pertinence sur contenu juridique)
+
+Process :
+
+- Test en ligne 20 minutes
+- Entretien technique 60 minutes
