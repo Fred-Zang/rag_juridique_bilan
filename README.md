@@ -109,4 +109,4 @@ Ce dépôt se veut un **support de discussion technique**, reflétant une approc
 - progressive,
 - et orientée compréhension fine des enjeux RAG juridiques.
 
-Il peut servir de base pour approfondir certaines briques, en fonction des priorités réell
+Il peut servir de base pour approfondir certaines briques, en fonction des priorités réelles du projet.
